@@ -1,5 +1,13 @@
 import { Queue } from "./queue";
 
+/* 
+Implement circular queue with a fixed-size array
+--------Time constraints------------
+Insert: O(1)
+Remove: O(1)
+*Constant times achieved by using pointers to keep track of where to remove/insert
+Search: O(n) - must brute force since queue is unsorted
+*/
 export class CircularQueue extends Queue {
   constructor(size: number) {
     super(size);
@@ -40,5 +48,14 @@ export class CircularQueue extends Queue {
     }
     result += this.queue[this.rear];
     return result; 
+  }
+
+  public size(): number{
+    if(this.isEmpty()) return 0;
+    if(this.rear >= this.front){
+      return this.rear - this.front + 1;
+    } else{
+      return this.queue.length - this.front + this.rear + 1;
+    }
   }
 }

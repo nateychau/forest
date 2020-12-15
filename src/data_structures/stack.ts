@@ -1,5 +1,16 @@
 /*
 Stack implementation in TS - substitute push/pop methods with pointer to top of stack
+
+--------Time constraints------------
+Insert: O(1) - amortized (array doubles in size whenever filled)
+Remove: O(1)
+*Constant times achieved by using pointers to keep track of where to remove/insert
+Search: O(n) - must brute force since deque is unsorted
+
+--------Use cases-------------
+-reverse a word
+-used in compilers to handle order of operations
+-browser history
 */
 
 export class Stack{

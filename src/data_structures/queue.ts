@@ -1,3 +1,14 @@
+/* 
+--------Time constraints------------
+Insert: O(1)
+Remove: O(1)
+*Constant times achieved by using pointers to keep track of where to remove/insert
+Search: O(n) - must brute force since deque is unsorted
+
+-------Use cases----------------
+
+*/
+
 export class Queue{
   protected front: number = -1;
   protected rear: number = -1;

@@ -1,6 +1,10 @@
 import { Stack } from './data_structures/stack';
 import { Queue } from './data_structures/queue';
 import { CircularQueue } from './data_structures/circular_queue';
+import { Deque } from './data_structures/deque';
+import { demoLinkedList } from './data_structures/linked_list';
 (window as any).Stack = Stack; 
 (window as any).Queue = Queue;
 (window as any).CircularQueue = CircularQueue;
+(window as any).Deque = Deque;
+(window as any).demoLinkedList = demoLinkedList;

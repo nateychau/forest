@@ -1,3 +1,8 @@
+
+//NOTE: usually used to implement a priority queue
+/*
+Implement heap with a dynamic array (could implement an ensureCapacity method for fixed size array)
+*/
 export class MaxHeap{
   private heap: number[]; 
 
@@ -55,12 +60,17 @@ export class MaxHeap{
     }
   }
 
+
+  //technically this operation can usually be done in O(logn) with heapifyUp
+  //the implementation here is O(nlogn) since we heapify the entire tree
   public insert(value: number): number{
     this.heap.push(value);
     this.heapifyEntireTree();
     return value;
   }
 
+  //can be implemented in O(logn) with heapifyDown
+  //implementation here is O(nlogn)
   public delete(index: number): number{
     let deletedNode = this.heap[index]; // save node to return later
     

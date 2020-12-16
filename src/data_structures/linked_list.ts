@@ -1,12 +1,3 @@
-export class Node{
-  public value: number;
-  public next: Node = null;
-
-  constructor(value: number){
-    this.value = value;
-  }
-}
-
 /* 
 Implement linked list with struct-like objects
 --------Time constraints------------
@@ -34,6 +25,15 @@ Search: O(n) - must brute force since queue is unsorted
     -head's prev pointer points to tail
 
 */
+
+class Node{
+  public value: number;
+  public next: Node = null;
+
+  constructor(value: number){
+    this.value = value;
+  }
+}
 
 export class LinkedList{
   public head: Node;
